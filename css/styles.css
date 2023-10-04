@@ -4,7 +4,7 @@ body {
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding: 2%;
     list-style: none;
     font-weight: bold;
 }
@@ -40,4 +40,36 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 3%;
+    align-items: center;
+    padding: 20px;
+}
+.main-photo{
+    flex: 30%;
+    max-width: 100%;
+    display: flex;
+}
+.pfp {
+    flex: 30%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.blurb{
+    flex: 70%;
+    padding: 5%;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .main-photo, .blurb {
+        flex: 100%; /* Take up full width */
+        max-width: 100%; /* Remove max-width to fill the screen */
+    }
 }
